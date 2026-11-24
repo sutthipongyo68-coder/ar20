@@ -1,0 +1,125 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ประวัติและวิวัฒนาการของโทรศัพท์มือถือ</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--fg:#222;--bar:#ddd5c4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14161b;--fg:#eee;--bar:#2a2e38}}
+:root[data-theme=dark]{--bg:#14161b;--fg:#eee;--bar:#2a2e38}
+@property --c1{syntax:'<color>';inherits:false;initial-value:#6b5a45}
+@property --c2{syntax:'<color>';inherits:false;initial-value:#d9c8a4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Sarabun,'Noto Sans Thai',Tahoma,sans-serif;display:grid;place-items:center}
+#w{width:min(100%,960px);padding:12px;box-sizing:border-box}
+#stg{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;container-type:inline-size;cursor:pointer;color:#fff;background:linear-gradient(160deg,var(--c1),var(--c2));transition:--c1 1.5s,--c2 1.5s}
+#stg *{animation-play-state:var(--pl,paused)}
+#stg::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 10cqw #0008;pointer-events:none}
+#sv{position:absolute;inset:0;width:100%;height:100%}
+#ttl{position:absolute;left:2.5cqw;top:2cqw;background:#0007;padding:.6cqw 1.5cqw;border-radius:1cqw;font-size:3cqw;line-height:1.3}
+#chip{display:block;font-size:1.9cqw;opacity:.85}
+#sub{position:absolute;left:4cqw;right:4cqw;bottom:2.5cqw;background:#000b;padding:1cqw 1.8cqw;border-radius:1.2cqw;text-align:center;line-height:1.5;font-size:2.1cqw}
+#end{position:absolute;left:4cqw;right:4cqw;bottom:2.5cqw;text-align:center;font-size:2.3cqw;line-height:1.5;pointer-events:none}
+#end div{background:#000b;padding:1cqw 1.8cqw;border-radius:1.2cqw}
+#c{display:flex;gap:8px;align-items:center;margin-top:8px}
+#c button{padding:6px 12px;border:0;border-radius:8px;background:var(--bar);color:var(--fg);font-size:16px;cursor:pointer}
+#rng{flex:1;min-width:0}
+#tim{font-size:14px;white-space:nowrap}
+#h{font-size:13px;opacity:.75;margin:8px 0 0}
+.fl{animation:fl 3s ease-in-out infinite alternate}@keyframes fl{to{transform:translateY(-14px)}}
+.sp{transform-origin:480px 345px;animation:sp 4s ease-in-out infinite}@keyframes sp{0%,20%{transform:rotate(0)}55%{transform:rotate(-130deg)}100%{transform:rotate(0)}}
+.rn{transform-origin:480px 230px;animation:rn .3s infinite alternate}@keyframes rn{to{transform:rotate(2deg)}}
+.an{transform-origin:421px 130px;animation:an .8s ease-in-out infinite alternate}@keyframes an{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.wv{fill:none;stroke-width:4;transform-box:fill-box;transform-origin:center;animation:wv 2.1s infinite;opacity:0}@keyframes wv{0%{transform:scale(.4);opacity:.9}100%{transform:scale(3.5);opacity:0}}
+.fw{stroke-dasharray:14 14;animation:fw .8s linear infinite}@keyframes fw{to{stroke-dashoffset:-28}}
+.k{animation:kb 2s infinite}@keyframes kb{0%,70%,100%{opacity:1}85%{opacity:.25}}
+.pp{transform-box:fill-box;transform-origin:center;animation:pop .5s backwards}@keyframes pop{from{transform:scale(0);opacity:0}}
+.wk{animation:wk 2.4s ease-in-out infinite alternate}@keyframes wk{to{transform:translateX(24px)}}
+.cs{animation:hr 4s linear infinite}@keyframes hr{to{filter:hue-rotate(360deg)}}
+.sc{animation:sc 2.5s linear infinite alternate}@keyframes sc{to{transform:translateY(290px)}}
+.tp{animation:tp 1.2s ease-in-out infinite}@keyframes tp{50%{transform:translateY(-26px)}}
+.ob{transform-origin:480px 215px;animation:ob 20s linear infinite}@keyframes ob{to{transform:rotate(360deg)}}
+.fi{animation:fi .8s calc(var(--d,0s) + var(--o,0s)) both}@keyframes fi{from{opacity:0}to{opacity:1}}
+.fo{animation:fo .8s calc(var(--d,0s) + var(--o,0s)) both}@keyframes fo{to{opacity:0}}
+@media(prefers-reduced-motion:reduce){.fl,.wk,.ob{animation:none}}
+</style></head><body>
+<div id="w">
+<div id="stg" style="--pl:paused"><svg id="sv" viewBox="0 0 960 540" preserveAspectRatio="xMidYMid slice" role="img" aria-label="แอนิเมชันประวัติโทรศัพท์มือถือ"></svg>
+<div id="ttl"><span id="chip"></span><b id="tt"></b></div><div id="end"></div><div id="sub"></div></div>
+<div id="c"><button id="ply" aria-label="เล่นหรือหยุด">▶</button><input id="rng" type="range" min="0" max="180" step="0.1" value="0" aria-label="ไทม์ไลน์"><span id="tim">0:00 / 3:00</span><button id="vbtn" aria-label="เสียงบรรยาย" title="เสียงบรรยาย">🗣</button><button id="mbtn" aria-label="ดนตรีและเสียงเอฟเฟกต์" title="ดนตรีและเสียงเอฟเฟกต์">🎵</button></div>
+<p id="h">เสียงบรรยายใช้เสียงภาษาไทยในอุปกรณ์ของคุณ หากไม่มี จะแสดงเฉพาะคำบรรยายบนจอ</p>
+</div>
+<script>
+const $=s=>document.querySelector(s),T=180,L=20,ST=$('#stg'),rng=$('#rng');
+const K=(x,y,c,r,w,h,g,f)=>{let o='';for(let j=0;j<r;j++)for(let i=0;i<c;i++)o+=`<rect class="k" style="animation-delay:${(j*c+i)*.2}s" x="${x+i*(w+g)}" y="${y+j*(h+g)}" width="${w}" height="${h}" rx="5" fill="${f}"/>`;return o};
+const W=(x,y,c)=>[0,.7,1.4].map(d=>`<circle class="wv" style="animation-delay:${d}s" cx="${x}" cy="${y}" r="50" stroke="${c}"/>`).join('');
+const A=(g,x,y,k,o=1)=>`<g transform="translate(${x} ${y}) scale(${k}) translate(-480 -290)" opacity="${o}">${g}</g>`;
+const H=(x,y,c,p)=>`<g class="wk" style="animation-delay:${(x%7)/4}s"><circle cx="${x}" cy="${y-62}" r="16" fill="#f1c8a0"/><rect x="${x-15}" y="${y-44}" width="30" height="58" rx="13" fill="${c}"/><rect x="${x-13}" y="${y+12}" width="10" height="34" rx="4" fill="#333"/><rect x="${x+3}" y="${y+12}" width="10" height="34" rx="4" fill="#333"/>${p?`<rect x="${x+8}" y="${y-36}" width="10" height="17" rx="2" fill="#7fe0ff"/>`:''}</g>`;
+const hole=[...Array(10)].map((_,k)=>{const a=(k*27+40)*Math.PI/180;return `<circle cx="${480+40*Math.cos(a)}" cy="${345+40*Math.sin(a)}" r="8" fill="#222"/>`}).join('');
+const P={
+dial:`<g class="fl"><path d="M330 440L380 270H580L630 440Z" fill="#2b2b2b"/><circle cx="480" cy="345" r="62" fill="#e8dcc0"/><g class="sp">${hole}</g><path class="rn" d="M340 250Q300 200 350 190H610Q660 200 620 250Q590 270 570 240H390Q370 270 340 250Z" fill="#111"/></g>`,
+brick:`<g class="fl"><rect class="an" x="412" y="55" width="18" height="75" rx="7" fill="#111"/><rect x="400" y="120" width="160" height="340" rx="22" fill="#2e2e2e"/><rect x="420" y="142" width="120" height="38" rx="5" fill="#9fd9a0"/>${K(416,200,3,5,36,28,10,'#c9c9c9')}</g>`,
+key:`<g class="fl"><rect x="440" y="125" width="10" height="35" rx="4" fill="#111"/><rect x="430" y="150" width="100" height="300" rx="18" fill="#2a2f3a"/><rect x="442" y="168" width="76" height="42" rx="5" fill="#a6e0a0"/>${K(441,230,3,5,22,18,6,'#d0d0d0')}</g>`,
+color:`<g class="fl"><rect x="425" y="135" width="110" height="315" rx="22" fill="#34495e"/><rect class="cs" x="437" y="155" width="86" height="96" rx="6" fill="url(#g1)"/><circle cx="505" cy="146" r="5" fill="#111"/>${K(441,268,3,4,22,18,6,'#ecf0f1')}</g>`,
+touch:`<g class="fl"><rect x="410" y="120" width="140" height="330" rx="28" fill="#0b0b0f"/><rect x="418" y="134" width="124" height="302" rx="20" fill="url(#b)"/>${[...Array(12)].map((_,i)=>`<rect class="pp" style="animation-delay:${2+i*.15}s" x="${424+(i%4)*30}" y="${170+((i/4)|0)*40}" width="24" height="24" rx="7" fill="hsl(${i*30} 80% 60%)"/>`).join('')}</g>`,
+ai:`<g class="fl"><rect x="400" y="110" width="160" height="350" rx="32" fill="#0b0b0f" stroke="#12d6e6" stroke-width="3"/><rect x="408" y="120" width="144" height="330" rx="26" fill="url(#n)"/><circle cx="480" cy="140" r="6" fill="#000"/><rect class="sc" x="408" y="150" width="144" height="4" fill="#fff" opacity=".8"/><text x="480" y="300" font-size="44" text-anchor="middle">✨</text></g>`};
+const DF=`<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5e62"/><stop offset=".5" stop-color="#ffd452"/><stop offset="1" stop-color="#3ddc97"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e5bd8"/><stop offset="1" stop-color="#7fe0ff"/></linearGradient><linearGradient id="n" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06142e"/><stop offset="1" stop-color="#12d6e6"/></linearGradient></defs>`;
+const BG=i=>[...Array(10)].map((_,k)=>`<rect x="${k*100-10}" y="${330-((k*37+i*53)%100)}" width="82" height="300" fill="#0003"/>`).join('')+`<rect y="440" width="960" height="100" fill="#0004"/>`;
+const IC=(a,d,fs)=>a.map(([e,x,y,l],i)=>`<g class="pp" style="animation-delay:${d+i*.8}s"><text class="fl" x="${x}" y="${y}" font-size="${fs}" text-anchor="middle">${e}</text>${l?`<text x="${x}" y="${y+36}" font-size="24" fill="#fff" text-anchor="middle">${l}</text>`:''}</g>`).join('');
+const nodes=[...Array(8)].map((_,k)=>{const a=k*Math.PI/4,x=480+130*Math.cos(a),y=215+130*Math.sin(a);return `<line x1="480" y1="215" x2="${x}" y2="${y}" stroke="#12d6e6" opacity=".4"/><circle cx="${x}" cy="${y}" r="9" fill="#ffd452"/>`}).join('');
+const D=[
+()=>`<g class="fo" style="--d:9s"><text class="fl" x="480" y="150" font-size="64" text-anchor="middle">✉️</text>${[[170,'#8b6b4a'],[320,'#6b5a45'],[640,'#7a634a'],[790,'#5d4b38']].map(([x,c])=>H(x,400,c)).join('')}</g><g class="fi" style="--d:9s">${[[170,'#e74c3c'],[320,'#3498db'],[640,'#2ecc71'],[790,'#f1c40f']].map(([x,c])=>H(x,400,c,1)).join('')}${A(P.ai,480,265,.75)}</g>`,
+()=>`${A(P.dial,250,300,.85)}${A(P.dial,710,300,.85)}<path class="fw" d="M377 427Q480 520 583 427" stroke="#2a1f14" stroke-width="7" fill="none"/>${W(710,175,'#fff')}`,
+()=>`${A(P.brick,480,290,1)}${W(421,62,'#fff')}<path d="M800 440L830 200L860 440Z" fill="none" stroke="#1d2733" stroke-width="7"/><circle cx="830" cy="195" r="11" fill="#e74c3c"/>${W(830,195,'#fff')}`,
+()=>`${A(P.brick,170,300,.7,.35)}<text x="300" y="330" font-size="70" fill="#fff" opacity=".85">➜</text>${A(P.key,610,290,1)}`,
+()=>`${A(P.color,480,290,1)}${IC([['✉️',250,200],['🐍',700,230],['📷',290,380],['🎮',690,390]],1,60)}`,
+()=>`${A(P.key,190,300,.75,.4)}<text x="330" y="330" font-size="70" fill="#fff" opacity=".9">➜</text>${A(P.touch,620,290,1)}<g class="pp" style="animation-delay:1s"><text class="tp" x="640" y="400" font-size="64">👆</text></g>`,
+()=>`${A(P.touch,480,290,1)}${W(480,290,'#ffd1ec')}${IC([['▶️',260,180],['🎮',700,180],['🎓',230,340],['💻',730,340],['💬',480,90]],.5,58)}`,
+()=>`${A(P.ai,480,285,1)}${W(480,285,'#12d6e6')}${IC([['🤖',230,170,'AI'],['📷',730,170,'กล้อง'],['🙂',220,330,'ใบหน้า'],['🎤',740,330,'เสียง'],['📶',480,85,'5G']],.5,56)}`,
+()=>`<g class="fo" style="--d:9s">${[['brick','1973'],['key','1980–90'],['color','1990–2000'],['touch','2007'],['ai','ปัจจุบัน']].map(([k,l],i)=>`<g class="pp" style="animation-delay:${i*1.4}s">${A(P[k],110+i*185,250,.5)}<text x="${110+i*185}" y="400" font-size="28" font-weight="700" fill="#fff" text-anchor="middle">${l}</text></g>`).join('')}<path d="M40 420H920" stroke="#fff" stroke-width="3" opacity=".6"/></g><g class="fi" style="--d:10s"><circle cx="480" cy="215" r="95" fill="#06142e" stroke="#12d6e6" stroke-width="3"/>${[85,50,20].map(r=>`<ellipse cx="480" cy="215" rx="${r}" ry="95" fill="none" stroke="#12d6e6" opacity=".6"/>`).join('')}<ellipse cx="480" cy="215" rx="95" ry="26" fill="none" stroke="#12d6e6" opacity=".6"/><g class="ob">${nodes}</g>${W(480,215,'#12d6e6')}</g>`];
+const PL=[['#6b5a45','#d9c8a4'],['#5a4632','#c9a96e'],['#3a4a5c','#8fa3b5'],['#7a3b1d','#e8a23a'],['#0f5c5c','#6fd3a8'],['#1d3b7a','#6fb1ff'],['#4a1d7a','#ff7ab6'],['#06142e','#0f7f9a'],['#4a3b5c','#b9a6d6'],['#2a7de1','#8fe3ff'],['#06142e','#12d6e6']];
+const N=[
+['จากโลกไร้มือถือ สู่ยุคสมาร์ตโฟน','เปิดเรื่อง',`ในอดีต ผู้คนสื่อสารกันด้วยจดหมายและการเดินทางไปพบกัน แต่วันนี้ ทุกคนมีสมาร์ตโฟนอยู่ในมือ มาย้อนดูเรื่องราวของโทรศัพท์มือถือไปพร้อมกัน`],
+['จุดเริ่มต้นของโทรศัพท์','ค.ศ. 1876',`ปี ค.ศ. 1876 อเล็กซานเดอร์ เกรแฮม เบลล์ ได้รับสิทธิบัตรโทรศัพท์ ต่อมามีโทรศัพท์แบบหมุนหมายเลข ใช้สื่อสารผ่านสายโทรศัพท์ แต่ผู้ใช้ต้องอยู่กับที่`],
+['กำเนิดโทรศัพท์มือถือเครื่องแรก','ค.ศ. 1973',`วันที่ 3 เมษายน ค.ศ. 1973 มาร์ติน คูเปอร์แห่งโมโตโรลา โทรออกด้วยมือถือเครื่องแรก ตัวใหญ่ หนักกว่า 1 กิโลกรัม และมีเสาอากาศยื่นออกมา`],
+['ยุคโทรศัพท์มือถือแบบปุ่มกด','ค.ศ. 1980–1990',`ในทศวรรษ 1980 ถึง 1990 โทรศัพท์มือถือเริ่มวางจำหน่ายจริง มีปุ่มกดและหน้าจอเล็ก ใช้โทรออกและรับสาย และถูกพัฒนาให้มีขนาดเล็กลงเรื่อย ๆ`],
+['ยุคโทรศัพท์สีและข้อความ','ค.ศ. 1990–2000',`ช่วงทศวรรษ 1990 ถึงต้นทศวรรษ 2000 เริ่มมีข้อความ SMS ตามมาด้วยหน้าจอสี เกมพื้นฐาน และกล้องถ่ายรูป ทำให้มือถือเป็นมากกว่าเครื่องโทรศัพท์`],
+['การกำเนิดสมาร์ตโฟน','ยุคหน้าจอสัมผัส',`โทรศัพท์เปลี่ยนจากปุ่มกดสู่หน้าจอสัมผัส ปี ค.ศ. 2007 มีการเปิดตัวไอโฟน และต่อมาระบบแอนดรอยด์ ทำให้ผู้คนใช้อินเทอร์เน็ต ถ่ายภาพ และติดตั้งแอปได้`],
+['โทรศัพท์มือถือในยุค 4G','ยุค 4G',`เมื่อเครือข่าย 4G แพร่หลาย ผู้คนใช้สมาร์ตโฟนดูวิดีโอ เล่นเกม เรียนออนไลน์ ประชุมทางไกล และสื่อสารผ่านสังคมออนไลน์ได้รวดเร็วขึ้น`],
+['โทรศัพท์มือถือในยุคปัจจุบัน','ยุค AI และ 5G',`ปัจจุบัน สมาร์ตโฟนมีเทคโนโลยี AI กล้องคุณภาพสูง ระบบจดจำใบหน้า การสั่งงานด้วยเสียง และเชื่อมต่อเครือข่าย 5G ซึ่งเริ่มให้บริการเชิงพาณิชย์ราวปี ค.ศ. 2019`],
+['บทสรุปและอนาคต','อดีตสู่อนาคต',`จากเครื่องมือสื่อสารธรรมดา สู่เทคโนโลยีที่เชื่อมต่อโลกทั้งใบ โทรศัพท์มือถือได้เปลี่ยนแปลงวิถีชีวิตของมนุษย์ไปตลอดกาล ขอให้เราใช้เทคโนโลยีอย่างสร้างสรรค์`]];
+let t=0,pl=false,last=0,cur=-1,pk=-1,vo=1,mu=1,n=0,AC;
+const f=x=>Math.floor(x/60)+':'+String(Math.floor(x%60)).padStart(2,'0');
+const ac=()=>AC||(AC=new(window.AudioContext||window.webkitAudioContext)());
+const nt=(fr,d,ty='sine',v=.05,dl=0)=>{if(!mu)return;try{const c=ac(),o=c.createOscillator(),g=c.createGain(),s=c.currentTime+dl;o.type=ty;o.frequency.value=fr;g.gain.setValueAtTime(v,s);g.gain.exponentialRampToValueAtTime(.0001,s+d);o.connect(g).connect(c.destination);o.start(s);o.stop(s+d)}catch(e){}};
+const sfx=i=>{if(i==1)for(let k=0;k<6;k++){nt(880,.12,'square',.03,k*.4);nt(660,.12,'square',.03,k*.4+.15)}
+if(i==3)for(let k=0;k<8;k++)nt(1000+k*70,.05,'square',.03,k*.45);
+if(i>3&&i<8){nt(1320,.2,'sine',.06);nt(1760,.35,'sine',.06,.2)}};
+const stp=()=>{try{speechSynthesis.cancel()}catch(e){}};
+const sp=i=>{stp();if(!vo||!pl)return;try{const u=new SpeechSynthesisUtterance(N[i][2]);u.lang='th-TH';const v=speechSynthesis.getVoices().filter(x=>x.lang.replace('_','-').startsWith('th'));if(v.length)u.voice=v.find(x=>/kanya|narisa|premwadee|female|หญิง/i.test(x.name))||v[0];u.rate=Math.max(1,Math.min(1.4,u.text.length/140));u.pitch=1.1;speechSynthesis.speak(u)}catch(e){}};
+function render(i,s){
+$('#sv').innerHTML=DF+BG(i)+D[i]();
+ST.style.setProperty('--o',-s+'s');
+$('#chip').textContent=N[i][1];$('#tt').textContent=N[i][0];
+const sb=$('#sub');sb.textContent=N[i][2];sb.className=i==8?'fo':'';sb.style.setProperty('--d','10.5s');
+$('#end').innerHTML=i==8?`<div class="fi" style="--d:11s">“จากเครื่องมือสื่อสารธรรมดา สู่เทคโนโลยีที่เชื่อมต่อโลกทั้งใบ โทรศัพท์มือถือได้เปลี่ยนแปลงวิถีชีวิตของมนุษย์ไปตลอดกาล”<br><b>ใช้เทคโนโลยีอย่างสร้างสรรค์</b></div>`:''}
+function setPlay(p){pl=p;ST.style.setProperty('--pl',p?'running':'paused');$('#ply').textContent=p?'⏸':t>=T?'↻':'▶';
+if(p){try{ac().resume()}catch(e){}if(t>=T){t=0;cur=-1}else if(cur>=0)sp(cur)}else stp()}
+function frame(now){
+if(pl)t=Math.min(T,t+(now-last)/1000);last=now;
+const i=Math.min(8,Math.floor(t/L)),s=t-i*L;
+if(i!==cur){cur=i;render(i,s);if(pl){sfx(i);sp(i)}}
+const k=i==0&&s>=9?9:i==8&&s>=10?10:i;
+if(k!==pk){pk=k;ST.style.setProperty('--c1',PL[k][0]);ST.style.setProperty('--c2',PL[k][1])}
+if(pl&&t>=T)setPlay(false);
+if(document.activeElement!==rng)rng.value=t;
+$('#tim').textContent=f(t)+' / 3:00';
+requestAnimationFrame(frame)}
+$('#ply').onclick=()=>setPlay(!pl);
+ST.onclick=()=>setPlay(!pl);
+rng.oninput=()=>{t=+rng.value;cur=-1;pk=-1;stp()};
+$('#vbtn').onclick=e=>{vo=!vo;e.currentTarget.style.opacity=vo?1:.4;if(vo)sp(cur);else stp()};
+$('#mbtn').onclick=e=>{mu=!mu;e.currentTarget.style.opacity=mu?1:.4};
+setInterval(()=>{if(pl)nt((cur<3?196:262)*[1,1.2,1.5,1.8,2][n++%5],.6,cur<3?'triangle':'sine',.025)},650);
+requestAnimationFrame(frame);
+</script></body></html>
